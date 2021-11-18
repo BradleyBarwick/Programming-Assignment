@@ -39,7 +39,7 @@ namespace Programming_Assignment
             string cmd = input.Trim().ToLower();
             string[] split = cmd.Split(" ");
 
-            string[] splitparam = null;
+            string[] splitparam = { "" };
 
             List<string> errors = new List<string>();
 
@@ -49,11 +49,11 @@ namespace Programming_Assignment
             }
             else
             {
-                if (split.Length > 2)
+                if (split.Length >= 3)
                 {
                     errors.Add("Too many parameters entered/Invalid format");
                     this.PopulateErrors(errors.ToArray());
-                    return;
+                    return false;
                 }
 
                 else
@@ -63,144 +63,166 @@ namespace Programming_Assignment
                         {
                             errors.Add("No parameters entered!");
                             this.PopulateErrors(errors.ToArray());
-                            return;
+                            return false;
                         }
                     }
                 }
             }
 
-            switch (split[0])
+            try
             {
-                case "circle":
-                    if (splitparam.Length > 1)
-                    {
-                        errors.Add("Too many parameters entered!");
-                    }
+                switch (split[0])
+                {
+                    case "circle":
+                        if (splitparam.Length > 1)
+                        {
+                            errors.Add("Too many parameters entered!");
+                        }
 
-                    if (splitparam.Length != 1)
-                    {
-                        errors.Add("No parameters entered!");
-                    }
-                    Draw.DrawCircle(Int32.Parse(splitparam[0]));
-                    break;
+                        if (splitparam.Length != 1)
+                        {
+                            errors.Add("No parameters entered!");
+                        }
+                        Draw.DrawCircle(Int32.Parse(splitparam[0]));
+                        break;
 
-                case "rect":
-                    if (splitparam.Length > 2)
-                    {
-                        errors.Add("Too many parameters entered!");
-                    }
-                    if (splitparam.Length != 2)
-                    {
-                        errors.Add("Missing parameters!");
-                        return;
-                    }
-                    Draw.DrawRectangle(Int32.Parse(splitparam[0]), Int32.Parse(splitparam[1]));
-                    break;
+                    case "rect":
+                        if (splitparam.Length > 2)
+                        {
+                            errors.Add("Too many parameters entered!");
+                        }
+                        if (splitparam.Length != 2)
+                        {
+                            errors.Add("Missing parameters!");
 
-                case "triangle":
-                    if (splitparam.Length > 3)
-                    {
-                        errors.Add("Too many parameters entered!");
-                    }
-                    if (splitparam.Length != 3 && splitparam.Length != 1)
-                    {
-                        errors.Add("Missing parameters!");
-                    }
-                    //Draw.DrawTriangle(Int32.Parse(splitparam[0]), Int32.Parse(splitparam[1]), Int32.Parse(splitparam[2]));
-                    break;
+                        }
+                        else { 
+                            Draw.DrawRectangle(Int32.Parse(splitparam[0]), Int32.Parse(splitparam[1])); 
+                        }
 
-                case "moveto":
-                    if (splitparam.Length > 2)
-                    {
-                        errors.Add("Too many parameters entered!");
-                    }
-                    if (splitparam.Length < 2)
-                    {
-                        errors.Add("Missing parameters!");
-                    }
-                    Draw.moveTo(Int32.Parse(splitparam[0]), Int32.Parse(splitparam[1]));
-                    break;
+                        break;
 
-                case "pen":
-                    if (splitparam.Length > 1)
-                    {
-                        errors.Add("Too many parameters entered!");
-                    }
-                    switch (splitparam[0])
-                    {
-                        case "black":
-                            Draw.SetPenColour("black");
-                            break;
-                        case "blue":
-                            Draw.SetPenColour("blue");
-                            break;
-                        case "green":
-                            Draw.SetPenColour("green");
-                            break;
-                        case "red":
-                            Draw.SetPenColour("red");
-                            break;
-                        case "yellow":
-                            Draw.SetPenColour("yellow");
-                            break;
-                        default:
-                            errors.Add("Unknown colour");
-                            break;
-                    }
-                    break;
+                    case "triangle":
+                        if (splitparam.Length > 3)
+                        {
+                            errors.Add("Too many parameters entered!");
+                        }
+                        if (splitparam.Length != 3 && splitparam.Length != 1)
+                        {
+                            errors.Add("Missing parameters!");
+                        }
+                        else
+                        {
+                            Draw.DrawTriangle(float.Parse(splitparam[0]), float.Parse(splitparam[1]), float.Parse(splitparam[2]));
+                        }
+                        break;
 
-                case "fill":
-                   
-                    if (splitparam.Length > 1)
-                    {
-                        errors.Add("Too many parameters!");
-                        return false;
-                    }
-                    if (splitparam.Length != 1)
-                    {
-                        errors.Add("Missing parameters!");
-                        return false;
-                    }
-                    if (splitparam[0].Equals("1"))
-                    {
-                        Draw.FillToTrue();
-                    }
-                    if (splitparam[0].Equals("0"))
-                    {
-                        Draw.FillToFalse();
-                    }
-                   
-                    break;
+                    case "moveto":
+                        if (splitparam.Length > 2)
+                        {
+                            errors.Add("Too many parameters entered!");
+                        }
+                        if (splitparam.Length < 2)
+                        {
+                            errors.Add("Missing parameters!");
+                        }
+                        else
+                        {
+                            Draw.moveTo(Int32.Parse(splitparam[0]), Int32.Parse(splitparam[1]));
+                        }
+                        break;
 
-                case "drawto":
-                    if (splitparam.Length > 2)
-                    {
-                        errors.Add("Too many parameters entered!");
-                    }    
-                    if (splitparam.Length != 2)
-                    {
-                        errors.Add("Missing parameters!");
-                    }
-                    Draw.drawTo(Int32.Parse(splitparam[0]), Int32.Parse(splitparam[1]));
-                    break;
+                    case "pen":
+                        if (splitparam.Length > 1)
+                        {
+                            errors.Add("Too many parameters entered!");
+                        }
+                        switch (splitparam[0])
+                        {
+                            case "black":
+                                Draw.SetPenColour("black");
+                                break;
+                            case "blue":
+                                Draw.SetPenColour("blue");
+                                break;
+                            case "green":
+                                Draw.SetPenColour("green");
+                                break;
+                            case "red":
+                                Draw.SetPenColour("red");
+                                break;
+                            case "yellow":
+                                Draw.SetPenColour("yellow");
+                                break;
+                            default:
+                                errors.Add("Unknown colour");
+                                break;
+                        }
+                        break;
 
-                case "reset":
-                    Draw.moveTo(0, 0);
-                    Draw.GetGraphics().Clear(Color.Transparent);
-                    TextYFloatOffset = 10.0f;
-                    break;
+                    case "fill":
 
-                case "clear":
-                    TextYFloatOffset = 10.0f;
-                    break;
+                        if (splitparam.Length > 1)
+                        {
+                            errors.Add("Too many parameters!");
+                            return false;
+                        }
+                        if (splitparam.Length != 1)
+                        {
+                            errors.Add("Missing parameters!");
+                            return false;
+                        }
+                        if (splitparam[0].Equals("1"))
+                        {
+                            Draw.FillToTrue();
+                        }
+                        if (splitparam[0].Equals("0"))
+                        {
+                            Draw.FillToFalse();
+                        }
 
-                default:
-                    errors.Add("Invalid Command");
-                    break;
+                        break;
+
+                    case "drawto":
+                        if (splitparam.Length > 2)
+                        {
+                            errors.Add("Too many parameters entered!");
+                        }
+                        if (splitparam.Length != 2)
+                        {
+                            errors.Add("Missing parameters!");
+                        }
+                        Draw.drawTo(Int32.Parse(splitparam[0]), Int32.Parse(splitparam[1]));
+                        break;
+
+                    case "reset":
+                        Draw.moveTo(0, 0);
+                        Draw.GetGraphics().Clear(Color.Transparent);
+                        TextYFloatOffset = 10.0f;
+                        break;
+
+                    case "clear":
+                        TextYFloatOffset = 10.0f;
+                        break;
+
+                    default:
+                        errors.Add("Invalid Command");
+                        break;
+                }
             }
+            catch (Exception e)
+            {
+                errors.Add(e.Message+ ": "+split[0]);
+            }
+            
             if(errors.Count > 0)
             {
                 this.PopulateErrors(errors.ToArray());
+                return false;
+            }
+            else
+            {
+                return true;
             }
             
 

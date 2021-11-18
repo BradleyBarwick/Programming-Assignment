@@ -33,9 +33,13 @@ namespace Programming_Assignment
             }
         }
 
-        public void DrawTriangle(int x, int y, int z)
+        public void DrawTriangle(float x, float y, float z)
         {
-            
+            PointF point1 = new PointF(x, y);
+            PointF point2 = new PointF(y, z);
+            PointF point3 = new PointF(z, x);
+            PointF[] curvePoints = { point1, point2, point3 };
+            g.DrawPolygon(Pen, curvePoints);
         }
 
         public void moveTo(int toX, int toY)

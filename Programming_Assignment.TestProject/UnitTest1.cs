@@ -151,5 +151,17 @@ namespace Programming_Assignment.TestProject
             Assert.IsFalse(form1.Parser.ParseCommand("drawto 50,x"));
 
         }
+        public void variablescriptinput()
+        {
+            Programming_Assignment.Form1 form1 = new Form1();
+            Assert.IsFalse(form1.Script.ParseCommand("x=5\nrect 50,x\n"));
+
+        }
+        public void whilescriptinput()
+        {
+            Programming_Assignment.Form1 form1 = new Form1();
+            Assert.IsFalse(form1.Script.ParseCommand("x=0\nwhile x<5\nx++\n"));
+
+        }
     }
 }

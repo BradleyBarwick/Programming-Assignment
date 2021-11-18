@@ -7,7 +7,7 @@ namespace Programming_Assignment
 {
     public class Script : Parser
     {
-        public new void ParseCommand(string input)
+        public new bool ParseCommand(string input)
         {
             string script = input.ToLower().Trim();
             string[] commands = script.Split("\n");
@@ -16,8 +16,14 @@ namespace Programming_Assignment
             base.ResetTextOffset();
             foreach (string command in commands)
             {
-                base.ParseCommand(command);
+                if (base.ParseCommand(command))
+                    return true;
+                else
+                {
+                    return false;
+                }
             }
+            return true;
         }
         public Script(Graphics g) : base(g){}
     }

@@ -32,3 +32,20 @@ C:\Users\bradl\source\repos\Programming Assignment1\Programming Assignment\bin\D
 C:\Users\bradl\source\repos\Programming Assignment1\Programming Assignment\bin\Debug\netcoreapp3.1\Programming Assignment.dll
 C:\Users\bradl\source\repos\Programming Assignment1\Programming Assignment\bin\Debug\netcoreapp3.1\Programming Assignment.pdb
 C:\Users\bradl\source\repos\Programming Assignment1\Programming Assignment\obj\Debug\netcoreapp3.1\Programming Assignment.genruntimeconfig.cache
+C:\Users\bradl\Source\Repos\Programming-AssignmentRepo\Programming Assignment\bin\Debug\netcoreapp3.1\Programming Assignment.exe
+C:\Users\bradl\Source\Repos\Programming-AssignmentRepo\Programming Assignment\bin\Debug\netcoreapp3.1\Programming Assignment.deps.json
+C:\Users\bradl\Source\Repos\Programming-AssignmentRepo\Programming Assignment\bin\Debug\netcoreapp3.1\Programming Assignment.runtimeconfig.json
+C:\Users\bradl\Source\Repos\Programming-AssignmentRepo\Programming Assignment\bin\Debug\netcoreapp3.1\Programming Assignment.runtimeconfig.dev.json
+C:\Users\bradl\Source\Repos\Programming-AssignmentRepo\Programming Assignment\bin\Debug\netcoreapp3.1\Programming Assignment.dll
+C:\Users\bradl\Source\Repos\Programming-AssignmentRepo\Programming Assignment\bin\Debug\netcoreapp3.1\Programming Assignment.pdb
+C:\Users\bradl\Source\Repos\Programming-AssignmentRepo\Programming Assignment\obj\Debug\netcoreapp3.1\Programming Assignment.csproj.AssemblyReference.cache
+C:\Users\bradl\Source\Repos\Programming-AssignmentRepo\Programming Assignment\obj\Debug\netcoreapp3.1\Programming_Assignment.Form1.resources
+C:\Users\bradl\Source\Repos\Programming-AssignmentRepo\Programming Assignment\obj\Debug\netcoreapp3.1\Programming_Assignment.Properties.Resources.resources
+C:\Users\bradl\Source\Repos\Programming-AssignmentRepo\Programming Assignment\obj\Debug\netcoreapp3.1\Programming Assignment.csproj.GenerateResource.cache
+C:\Users\bradl\Source\Repos\Programming-AssignmentRepo\Programming Assignment\obj\Debug\netcoreapp3.1\Programming Assignment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bradl\Source\Repos\Programming-AssignmentRepo\Programming Assignment\obj\Debug\netcoreapp3.1\Programming Assignment.AssemblyInfoInputs.cache
+C:\Users\bradl\Source\Repos\Programming-AssignmentRepo\Programming Assignment\obj\Debug\netcoreapp3.1\Programming Assignment.AssemblyInfo.cs
+C:\Users\bradl\Source\Repos\Programming-AssignmentRepo\Programming Assignment\obj\Debug\netcoreapp3.1\Programming Assignment.csproj.CoreCompileInputs.cache
+C:\Users\bradl\Source\Repos\Programming-AssignmentRepo\Programming Assignment\obj\Debug\netcoreapp3.1\Programming Assignment.dll
+C:\Users\bradl\Source\Repos\Programming-AssignmentRepo\Programming Assignment\obj\Debug\netcoreapp3.1\Programming Assignment.pdb
+C:\Users\bradl\Source\Repos\Programming-AssignmentRepo\Programming Assignment\obj\Debug\netcoreapp3.1\Programming Assignment.genruntimeconfig.cache

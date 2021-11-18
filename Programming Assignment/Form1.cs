@@ -17,6 +17,7 @@ namespace Programming_Assignment
         
 
         Bitmap OutputBitmap;
+        Graphics GraphicsObject;
         Canvas Canvas;
         Parser Parser;
         Script Script;
@@ -26,15 +27,10 @@ namespace Programming_Assignment
             ScreenX = 640;
             ScreenY = 480;
             OutputBitmap = new Bitmap(ScreenX, ScreenY);
-            Graphics GraphicsObject = Graphics.FromImage(OutputBitmap);
+            GraphicsObject = Graphics.FromImage(OutputBitmap);
             Canvas = new Canvas(GraphicsObject);
             Parser = new Parser(GraphicsObject);
             Script = new Script(GraphicsObject);
-
-        }
-
-        private void CommandLine_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -48,6 +44,13 @@ namespace Programming_Assignment
                     Refresh();
                     return;
                 }
+
+                if (CommandLine.Text.Contains("clear"))
+                {
+                    this.GraphicsObject.Clear(Color.Transparent);
+                    Refresh();
+                }
+                
 
                 Parser.ParseCommand(CommandLine.Text);
                 CommandLine.Text = "";

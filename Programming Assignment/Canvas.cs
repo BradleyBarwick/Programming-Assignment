@@ -23,6 +23,8 @@ namespace Programming_Assignment
             SolidBrush = new SolidBrush(DrawColour);
         }
 
+
+
         public Graphics GetGraphics()
         {
             return this.g;

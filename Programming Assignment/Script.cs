@@ -12,7 +12,9 @@ namespace Programming_Assignment
             string script = input.ToLower().Trim();
             string[] commands = script.Split("\n");
 
-            foreach(string command in commands)
+
+            base.ResetTextOffset();
+            foreach (string command in commands)
             {
                 base.ParseCommand(command);
             }

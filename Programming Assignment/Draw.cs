@@ -33,20 +33,22 @@ namespace Programming_Assignment
             }
         }
 
-        public void DrawTriangle()
+        public void DrawTriangle(int x, int y, int z)
         {
             
         }
 
         public void moveTo(int toX, int toY)
         {
-            xPos = toX;
-            yPos = toY;
+            base.xPos = toX;
+            base.yPos = toY;
         }
 
         public void SetPenColour(string colour)
         {
             DrawColour = Color.FromName(colour);
+            base.Pen = new Pen(DrawColour, 1);
+            base.SolidBrush = new SolidBrush(DrawColour);
         }
 
         public void FillToTrue()
@@ -65,17 +67,6 @@ namespace Programming_Assignment
             xPos = toX;
             yPos = toY;
         }
-
-        public void reset()
-        {
-
-        }
-
-        public void clear()
-        {
-           
-        }
-
 
         public Draw(Graphics g) : base(g)
         {

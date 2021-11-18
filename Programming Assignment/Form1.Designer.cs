@@ -31,11 +31,11 @@ namespace Programming_Assignment
         {
             this.OutputWindow = new System.Windows.Forms.PictureBox();
             this.CommandLine = new System.Windows.Forms.TextBox();
-            this.ProgramWindow = new System.Windows.Forms.RichTextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ProgramWindow = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.OutputWindow)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -57,14 +57,6 @@ namespace Programming_Assignment
             this.CommandLine.Size = new System.Drawing.Size(780, 23);
             this.CommandLine.TabIndex = 1;
             this.CommandLine.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CommandLine_KeyDown);
-            // 
-            // ProgramWindow
-            // 
-            this.ProgramWindow.Location = new System.Drawing.Point(13, 37);
-            this.ProgramWindow.Name = "ProgramWindow";
-            this.ProgramWindow.Size = new System.Drawing.Size(223, 501);
-            this.ProgramWindow.TabIndex = 2;
-            this.ProgramWindow.Text = "";
             // 
             // toolStrip1
             // 
@@ -104,13 +96,21 @@ namespace Programming_Assignment
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
+            // ProgramWindow
+            // 
+            this.ProgramWindow.Location = new System.Drawing.Point(13, 29);
+            this.ProgramWindow.Multiline = true;
+            this.ProgramWindow.Name = "ProgramWindow";
+            this.ProgramWindow.Size = new System.Drawing.Size(237, 509);
+            this.ProgramWindow.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 622);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.ProgramWindow);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.CommandLine);
             this.Controls.Add(this.OutputWindow);
             this.Name = "Form1";
@@ -127,11 +127,11 @@ namespace Programming_Assignment
 
         private System.Windows.Forms.PictureBox OutputWindow;
         private System.Windows.Forms.TextBox CommandLine;
-        private System.Windows.Forms.RichTextBox ProgramWindow;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.TextBox ProgramWindow;
     }
 }
 

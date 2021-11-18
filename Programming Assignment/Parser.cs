@@ -185,10 +185,10 @@ namespace Programming_Assignment
                         {
                             Draw.FillToFalse();
                         }
-                        else
-                        {
-                            errors.Add("Invalid parameter!");
-                        }
+                      
+                        
+                       
+                        
 
                         break;
 

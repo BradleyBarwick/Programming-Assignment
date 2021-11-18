@@ -26,7 +26,7 @@ namespace Programming_Assignment.TestProject
             Programming_Assignment.Form1 form1 = new Form1();
             Assert.IsFalse(form1.Parser.ParseCommand("rect 50,x"));
         }
-
+        //test to see if the rectangle functions work correctly
 
 
         [TestMethod]
@@ -48,7 +48,7 @@ namespace Programming_Assignment.TestProject
             Assert.IsFalse(form1.Parser.ParseCommand("circle x"));
         }
 
-
+        //test to see if the circle functions work correctly
 
         [TestMethod]
         public void DrawTriangleMethod()
@@ -69,7 +69,7 @@ namespace Programming_Assignment.TestProject
             Assert.IsFalse(form1.Parser.ParseCommand("triangle 50,50,x"));
         }
 
-
+        //test to see if the triangle functions work correctly
 
         [TestMethod]
         public void MoveToMethod()
@@ -90,7 +90,7 @@ namespace Programming_Assignment.TestProject
             Assert.IsFalse(form1.Parser.ParseCommand("moveto 50,x"));
         }
 
-
+        //test to see if the moveto functions work correctly
 
         [TestMethod]
         public void SetPenColourMethod()
@@ -111,6 +111,7 @@ namespace Programming_Assignment.TestProject
             Assert.IsFalse(form1.Parser.ParseCommand("pen colours"));
         }
 
+        //test to see if the pen colour functions work correctly
 
         [TestMethod]
         public void FillMethod()
@@ -124,13 +125,9 @@ namespace Programming_Assignment.TestProject
             Programming_Assignment.Form1 form1 = new Form1();
             Assert.IsFalse(form1.Parser.ParseCommand("fill"));
         }
-        [TestMethod]
-        public void FillInvalidParameterMethod()
-        {
-            Programming_Assignment.Form1 form1 = new Form1();
-            Assert.IsFalse(form1.Parser.ParseCommand("fill a"));
-        }
 
+
+        //test to see if the fill functions work correctly
 
         [TestMethod]
         public void DrawToMethod()
@@ -151,16 +148,31 @@ namespace Programming_Assignment.TestProject
             Assert.IsFalse(form1.Parser.ParseCommand("drawto 50,x"));
 
         }
+
+        //test to see if the drawto functions work correctly
+        [TestMethod]
+        public void TestScript()
+        {
+            Programming_Assignment.Form1 form1 = new Form1();
+            Assert.IsTrue(form1.Script.ParseCommand("rect 50,50\r\ncircle 50\r\n"));
+
+        }
+
+
+        [TestMethod]
         public void variablescriptinput()
         {
             Programming_Assignment.Form1 form1 = new Form1();
-            Assert.IsFalse(form1.Script.ParseCommand("x=5\nrect 50,x\n"));
+            Assert.IsFalse(form1.Script.ParseCommand("x=5\r\nrect 50,x\r\n"));
 
         }
+
+
+        [TestMethod]
         public void whilescriptinput()
         {
             Programming_Assignment.Form1 form1 = new Form1();
-            Assert.IsFalse(form1.Script.ParseCommand("x=0\nwhile x<5\nx++\n"));
+            Assert.IsFalse(form1.Script.ParseCommand("x=0\r\nwhile x<5\r\nx++\r\n"));
 
         }
     }

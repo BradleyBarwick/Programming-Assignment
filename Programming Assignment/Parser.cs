@@ -83,7 +83,11 @@ namespace Programming_Assignment
                         {
                             errors.Add("No parameters entered!");
                         }
-                        Draw.DrawCircle(Int32.Parse(splitparam[0]));
+                        else
+                        {
+                            Draw.DrawCircle(Int32.Parse(splitparam[0]));
+                        }
+                        
                         break;
 
                     case "rect":
@@ -96,7 +100,8 @@ namespace Programming_Assignment
                             errors.Add("Missing parameters!");
 
                         }
-                        else { 
+                        else 
+                        { 
                             Draw.DrawRectangle(Int32.Parse(splitparam[0]), Int32.Parse(splitparam[1])); 
                         }
 
@@ -192,7 +197,10 @@ namespace Programming_Assignment
                         {
                             errors.Add("Missing parameters!");
                         }
-                        Draw.drawTo(Int32.Parse(splitparam[0]), Int32.Parse(splitparam[1]));
+                        else
+                        {
+                            Draw.drawTo(Int32.Parse(splitparam[0]), Int32.Parse(splitparam[1]));
+                        }
                         break;
 
                     case "reset":

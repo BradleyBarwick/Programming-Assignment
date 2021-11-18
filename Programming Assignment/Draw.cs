@@ -13,11 +13,11 @@ namespace Programming_Assignment
         {
             if (!Fill)
             {
-                g.DrawRectangle(Pen, xPos, yPos, xPos + width, yPos + height);
+                g.DrawRectangle(Pen, xPos, yPos, width,  height);
             }
             else
             {
-                g.FillRectangle(SolidBrush, xPos, yPos, xPos + width, yPos + height);
+                g.FillRectangle(SolidBrush, xPos, yPos, width, height);
             }
 
         }
@@ -68,8 +68,6 @@ namespace Programming_Assignment
         public void drawTo(int toX, int toY)
         {
             g.DrawLine(Pen, xPos, yPos, toX, toY);
-            xPos = toX;
-            yPos = toY;
         }
 
         public Draw(Graphics g) : base(g)

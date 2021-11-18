@@ -5,7 +5,7 @@ using System.Drawing;
 
 namespace Programming_Assignment
 {
-    class Canvas
+    public class Canvas
     {
         protected Graphics g;
         protected Pen Pen;

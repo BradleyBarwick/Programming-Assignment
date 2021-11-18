@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Programming_Assignment
 {
-    class Draw : Canvas
+    public class Draw : Canvas
     {
         protected bool Fill;
 
@@ -32,7 +32,12 @@ namespace Programming_Assignment
                 g.FillEllipse(SolidBrush, xPos, yPos, radius, radius);
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="z"></param>
         public void DrawTriangle(float x, float y, float z)
         {
             PointF point1 = new PointF(x, y);

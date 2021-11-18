@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Programming_Assignment
 {
-    class Script : Parser
+    public class Script : Parser
     {
         public new void ParseCommand(string input)
         {

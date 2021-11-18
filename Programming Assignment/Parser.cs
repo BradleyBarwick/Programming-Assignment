@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Programming_Assignment
 {
-    class Parser
+    public class Parser
     {
 
         protected Graphics GraphicsContext;
@@ -184,6 +184,10 @@ namespace Programming_Assignment
                         if (splitparam[0].Equals("0"))
                         {
                             Draw.FillToFalse();
+                        }
+                        else
+                        {
+                            errors.Add("Invalid parameter!");
                         }
 
                         break;

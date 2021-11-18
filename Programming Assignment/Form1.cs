@@ -17,10 +17,10 @@ namespace Programming_Assignment
         
 
         Bitmap OutputBitmap;
-        Graphics GraphicsObject;
-        Canvas Canvas;
-        Parser Parser;
-        Script Script;
+        public Graphics GraphicsObject;
+        public Canvas Canvas = null;
+        public Parser Parser;
+        public Script Script;
         public Form1()
         {
             InitializeComponent();

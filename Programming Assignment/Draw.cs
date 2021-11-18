@@ -8,7 +8,11 @@ namespace Programming_Assignment
     public class Draw : Canvas
     {
         protected bool Fill;
-
+        /// <summary>
+        /// function to draw a rectangle in relation to x and y position of the pen using width and height integers.
+        /// </summary>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
         public void DrawRectangle(int width, int height)
         {
             if (!Fill)
@@ -21,6 +25,10 @@ namespace Programming_Assignment
             }
 
         }
+        /// <summary>
+        /// function to draw a circle in relation to the x and y position of the pen using the radius inputed.
+        /// </summary>
+        /// <param name="radius"></param>
         public void DrawCircle(int radius)
         {
             if (!Fill)
@@ -33,7 +41,7 @@ namespace Programming_Assignment
             }
         }
         /// <summary>
-        /// 
+        /// function to draw a triangle in relation to x and y position of the pen and takes in 3 integers to create the polygon shape.
         /// </summary>
         /// <param name="x"></param>
         /// <param name="y"></param>
@@ -46,30 +54,45 @@ namespace Programming_Assignment
             PointF[] curvePoints = { point1, point2, point3 };
             g.DrawPolygon(Pen, curvePoints);
         }
-
+        /// <summary>
+        /// function to move the pen to a specific location via inputed values if x and y.
+        /// </summary>
+        /// <param name="toX"></param>
+        /// <param name="toY"></param>
         public void moveTo(int toX, int toY)
         {
             base.xPos = toX;
             base.yPos = toY;
         }
-
+        /// <summary>
+        /// function to change the colour of the pen via specified colour.
+        /// </summary>
+        /// <param name="colour"></param>
         public void SetPenColour(string colour)
         {
             DrawColour = Color.FromName(colour);
             base.Pen = new Pen(DrawColour, 1);
             base.SolidBrush = new SolidBrush(DrawColour);
         }
-
+        /// <summary>
+        /// function to turn on fill when the shape is drawn.
+        /// </summary>
         public void FillToTrue()
         {
             Fill = true;
         }
-
+        /// <summary>
+        /// function to turn off fill when the shape is drawn.
+        /// </summary>
         public void FillToFalse()
         {
             Fill = false;
         }
-
+        /// <summary>
+        /// function to draw a line from the pens current x and y to a new specified x and y
+        /// </summary>
+        /// <param name="toX"></param>
+        /// <param name="toY"></param>
         public void drawTo(int toX, int toY)
         {
             g.DrawLine(Pen, xPos, yPos, toX, toY);

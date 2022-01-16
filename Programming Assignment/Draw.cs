@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Text;
+﻿using System.Drawing;
 
 namespace Programming_Assignment
 {
@@ -15,13 +12,16 @@ namespace Programming_Assignment
         /// <param name="height"></param>
         public void DrawRectangle(int width, int height)
         {
-            if (!Fill)
+            Shape rect = new ShapeFactory().getShape("rectangle");
+            rect.set(Pen.Color, xPos, yPos, Pen.Width, width, height);
+            if (!this.FillShapes())
             {
-                g.DrawRectangle(Pen, xPos, yPos, width,  height);
+                rect.draw(g);
             }
             else
             {
-                g.FillRectangle(SolidBrush, xPos, yPos, width, height);
+                rect.isFilled(true);
+                rect.draw(g);
             }
 
         }
@@ -31,15 +31,18 @@ namespace Programming_Assignment
         /// <param name="radius"></param>
         public void DrawCircle(int radius)
         {
-            if (!Fill)
+            Shape circle = new ShapeFactory().getShape("circle");
+            circle.set(Pen.Color, xPos, yPos, Pen.Width, radius);
+            if (!this.FillShapes())
             {
-                g.DrawEllipse(Pen, xPos, yPos, radius, radius);
+                circle.draw(g);
             }
             else
             {
-                g.FillEllipse(SolidBrush, xPos, yPos, radius, radius);
+                circle.isFilled(true);
+                circle.draw(g);
             }
-        }
+    }
         /// <summary>
         /// function to draw a triangle in relation to x and y position of the pen and takes in 3 integers to create the polygon shape.
         /// </summary>
@@ -87,6 +90,10 @@ namespace Programming_Assignment
         public void FillToFalse()
         {
             Fill = false;
+        }
+        public bool FillShapes()
+        {
+            return Fill;
         }
         /// <summary>
         /// function to draw a line from the pens current x and y to a new specified x and y

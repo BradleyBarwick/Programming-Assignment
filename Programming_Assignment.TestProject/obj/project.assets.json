@@ -6133,24 +6133,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bradl\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\alcom\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bradl\\source\\repos\\Programming-AssignmentRepo\\Programming_Assignment.TestProject\\Programming_Assignment.TestProject.csproj",
+      "projectUniqueName": "C:\\Users\\alcom\\OneDrive\\Desktop\\Programming-AssignmentRepo\\Programming_Assignment.TestProject\\Programming_Assignment.TestProject.csproj",
       "projectName": "Programming_Assignment.TestProject",
-      "projectPath": "C:\\Users\\bradl\\source\\repos\\Programming-AssignmentRepo\\Programming_Assignment.TestProject\\Programming_Assignment.TestProject.csproj",
-      "packagesPath": "C:\\Users\\bradl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bradl\\source\\repos\\Programming-AssignmentRepo\\Programming_Assignment.TestProject\\obj\\",
+      "projectPath": "C:\\Users\\alcom\\OneDrive\\Desktop\\Programming-AssignmentRepo\\Programming_Assignment.TestProject\\Programming_Assignment.TestProject.csproj",
+      "packagesPath": "C:\\Users\\alcom\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alcom\\OneDrive\\Desktop\\Programming-AssignmentRepo\\Programming_Assignment.TestProject\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\bradl\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\alcom\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6164,8 +6159,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\bradl\\source\\repos\\Programming-AssignmentRepo\\Programming Assignment\\Programming Assignment.csproj": {
-              "projectPath": "C:\\Users\\bradl\\source\\repos\\Programming-AssignmentRepo\\Programming Assignment\\Programming Assignment.csproj"
+            "C:\\Users\\alcom\\OneDrive\\Desktop\\Programming-AssignmentRepo\\Programming Assignment\\Programming Assignment.csproj": {
+              "projectPath": "C:\\Users\\alcom\\OneDrive\\Desktop\\Programming-AssignmentRepo\\Programming Assignment\\Programming Assignment.csproj"
             }
           }
         }
@@ -6207,12 +6202,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.10, 3.1.10]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

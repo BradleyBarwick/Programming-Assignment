@@ -5,8 +5,12 @@ using System.Text;
 
 namespace Programming_Assignment
 {
+
     public class Script : Parser
     {
+        
+        Dictionary<string, string> variables = new Dictionary<string, string>();
+
         public new bool ParseCommand(string input)
         {
             string script = input.ToLower().Trim();
@@ -22,11 +26,13 @@ namespace Programming_Assignment
                     error = true;
                 }
             }
+            
             if (error)
             {
                 return false;
             }
-            else { 
+            else 
+            { 
                 return true; 
             }
         }

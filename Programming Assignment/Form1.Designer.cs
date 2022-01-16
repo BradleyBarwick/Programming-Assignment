@@ -43,28 +43,31 @@ namespace Programming_Assignment
             // OutputWindow
             // 
             this.OutputWindow.BackColor = System.Drawing.SystemColors.Control;
-            this.OutputWindow.Location = new System.Drawing.Point(256, 13);
+            this.OutputWindow.Location = new System.Drawing.Point(293, 39);
+            this.OutputWindow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OutputWindow.Name = "OutputWindow";
-            this.OutputWindow.Size = new System.Drawing.Size(536, 525);
+            this.OutputWindow.Size = new System.Drawing.Size(613, 678);
             this.OutputWindow.TabIndex = 0;
             this.OutputWindow.TabStop = false;
             this.OutputWindow.Paint += new System.Windows.Forms.PaintEventHandler(this.OutputWindow_Paint);
             // 
             // CommandLine
             // 
-            this.CommandLine.Location = new System.Drawing.Point(12, 563);
+            this.CommandLine.Location = new System.Drawing.Point(14, 751);
+            this.CommandLine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CommandLine.Name = "CommandLine";
-            this.CommandLine.Size = new System.Drawing.Size(780, 23);
+            this.CommandLine.Size = new System.Drawing.Size(891, 27);
             this.CommandLine.TabIndex = 1;
             this.CommandLine.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CommandLine_KeyDown);
             // 
             // toolStrip1
             // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(811, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(927, 27);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -77,7 +80,7 @@ namespace Programming_Assignment
             this.openToolStripMenuItem});
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(51, 22);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 24);
             this.toolStripDropDownButton1.Tag = "";
             this.toolStripDropDownButton1.Text = "Menu";
             this.toolStripDropDownButton1.ToolTipText = "toolStripDropDownButton1";
@@ -85,34 +88,36 @@ namespace Programming_Assignment
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // ProgramWindow
             // 
-            this.ProgramWindow.Location = new System.Drawing.Point(13, 29);
+            this.ProgramWindow.Location = new System.Drawing.Point(15, 39);
+            this.ProgramWindow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ProgramWindow.Multiline = true;
             this.ProgramWindow.Name = "ProgramWindow";
-            this.ProgramWindow.Size = new System.Drawing.Size(237, 509);
+            this.ProgramWindow.Size = new System.Drawing.Size(270, 677);
             this.ProgramWindow.TabIndex = 4;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 622);
+            this.ClientSize = new System.Drawing.Size(927, 829);
             this.Controls.Add(this.ProgramWindow);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.CommandLine);
             this.Controls.Add(this.OutputWindow);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.OutputWindow)).EndInit();

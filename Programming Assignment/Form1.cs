@@ -49,6 +49,7 @@ namespace Programming_Assignment
             {
                 if (CommandLine.Text.Equals("run"))
                 {
+                    Script.ResetTextOffset();
                     Script.ParseCommand(ProgramWindow.Text);
                     Refresh();
                     return;

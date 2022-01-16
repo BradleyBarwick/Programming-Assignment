@@ -39,7 +39,7 @@ namespace Programming_Assignment
                 }
                 catch (Exception)
                 {
-                    base.PopulateErrors(new []{ "Can't add a variable to variable! "+ line});
+                    base.PopulateErrors(new []{ "You can only add a number to a variable! "+ line});
                 }
             }
         }
@@ -76,7 +76,7 @@ namespace Programming_Assignment
             {
                 string[] wordSplit = command.Split(' ');
                 
-                if (command.Contains("="))
+                if (command.Contains("=") && !command.Contains("=="))
                 {
                     NewVariable(command);
                     continue;
@@ -91,11 +91,13 @@ namespace Programming_Assignment
                         if (loopcommand.Contains("loop") && !loopcommand.Equals("endloop"))
                         {
                             LoopCommandIndex = Array.IndexOf(commands, loopcommand);
+                            commands[Array.IndexOf(commands, loopcommand)] = "";
                         }
 
                         if (loopcommand.Equals("endloop"))
                         {
                             EndLoopCommandIndex = Array.IndexOf(commands, loopcommand);
+                            commands[Array.IndexOf(commands, loopcommand)] = "";
                         }
                     }
                     List<string> LoopCommands = new List<string>();
@@ -107,8 +109,57 @@ namespace Programming_Assignment
                     continue;
                 }
 
-                if (command.Equals("endloop"))
+                if (command.Contains("if"))
                 {
+                    string substitutedIf = SubstituteCommand(command);
+                    int commandIndex = Array.IndexOf(commands, command);
+                    wordSplit = substitutedIf.Split(' ');
+                    try
+                    {
+                        switch (wordSplit[2])
+                        {
+                            case "==":
+                                if (wordSplit[1].Equals(wordSplit[3]))
+                                {
+                                    ParseCommand(commands[commandIndex + 1]);
+                                }
+                                break;
+                            case "!=":
+                                if (!wordSplit[1].Equals(wordSplit[3]))
+                                {
+                                    ParseCommand(commands[commandIndex + 1]);
+                                }
+                                break;
+                            case ">":
+                                if (int.Parse(wordSplit[1]) > int.Parse(wordSplit[3]))
+                                {
+                                    ParseCommand(commands[commandIndex + 1]);
+                                }
+                                break;
+                            case "<":
+                                if (int.Parse(wordSplit[1]) < int.Parse(wordSplit[3]))
+                                {
+                                    ParseCommand(commands[commandIndex + 1]);
+                                }
+                                break;
+                            default:
+                                base.PopulateErrors(new[] { "Unknown Operation for If statement: " + wordSplit[2] });
+                                break;
+                        }
+                        if (commands[commandIndex + 1] != null)
+                        {
+                            commands[commandIndex + 1] = "";
+                            commands[commandIndex] = "";
+                            continue;
+                        }
+                    }catch (Exception)
+                    {
+                        base.PopulateErrors(new[] { "Number Format Exception at: " + commands[commandIndex + 1] });
+                    }
+                }
+
+                if (command.Equals("endloop"))
+                { 
                     continue;
                 }
 
@@ -116,10 +167,12 @@ namespace Programming_Assignment
                 {
                     substitudedCommand = SubstituteCommand(command);
                 }
-
-                if (!base.ParseCommand(substitudedCommand))
+                if (!command.Equals(""))
                 {
-                    error = true;
+                    if (!base.ParseCommand(substitudedCommand))
+                    {
+                        error = true;
+                    }
                 }
             }
             

@@ -46,7 +46,7 @@ namespace Programming_Assignment
             this.OutputWindow.Location = new System.Drawing.Point(293, 39);
             this.OutputWindow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OutputWindow.Name = "OutputWindow";
-            this.OutputWindow.Size = new System.Drawing.Size(613, 678);
+            this.OutputWindow.Size = new System.Drawing.Size(1184, 678);
             this.OutputWindow.TabIndex = 0;
             this.OutputWindow.TabStop = false;
             this.OutputWindow.Paint += new System.Windows.Forms.PaintEventHandler(this.OutputWindow_Paint);
@@ -56,7 +56,7 @@ namespace Programming_Assignment
             this.CommandLine.Location = new System.Drawing.Point(14, 751);
             this.CommandLine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CommandLine.Name = "CommandLine";
-            this.CommandLine.Size = new System.Drawing.Size(891, 27);
+            this.CommandLine.Size = new System.Drawing.Size(1463, 27);
             this.CommandLine.TabIndex = 1;
             this.CommandLine.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CommandLine_KeyDown);
             // 
@@ -67,7 +67,7 @@ namespace Programming_Assignment
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(927, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1489, 27);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -112,7 +112,7 @@ namespace Programming_Assignment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(927, 829);
+            this.ClientSize = new System.Drawing.Size(1489, 800);
             this.Controls.Add(this.ProgramWindow);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.CommandLine);

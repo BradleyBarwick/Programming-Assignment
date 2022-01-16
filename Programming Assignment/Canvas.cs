@@ -16,8 +16,6 @@ namespace Programming_Assignment
         public Canvas(Graphics g)
         {
             this.g = g;
-            xPos = 0;
-            yPos = 0;
             DrawColour = Color.Black;
             Pen = new Pen(DrawColour, 1);
             SolidBrush = new SolidBrush(DrawColour);

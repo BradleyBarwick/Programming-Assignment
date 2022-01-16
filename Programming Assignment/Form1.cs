@@ -29,8 +29,8 @@ namespace Programming_Assignment
         public Form1()
         {
             InitializeComponent();
-            ScreenX = 640;
-            ScreenY = 480;
+            ScreenX = OutputWindow.Width;
+            ScreenY = OutputWindow.Height;
             OutputBitmap = new Bitmap(ScreenX, ScreenY);
             GraphicsObject = Graphics.FromImage(OutputBitmap);
             Canvas = new Canvas(GraphicsObject);

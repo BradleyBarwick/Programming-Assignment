@@ -18,9 +18,9 @@ namespace Programming_Assignment
             Draw = new Draw(GraphicsContext);
         }
 
-        private void PopulateErrors(string[] errors)
+        protected void PopulateErrors(string[] errors)
         {
-            Font Font = new Font(new FontFamily("Arial"), 15);
+            Font Font = new Font(new FontFamily("Arial"), 12);
             foreach (string error in errors)
             {
                 GraphicsContext.DrawString(error, Font, new SolidBrush(Color.Black), new PointF(10.0f, TextYFloatOffset));

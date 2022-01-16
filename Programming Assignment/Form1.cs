@@ -58,6 +58,7 @@ namespace Programming_Assignment
                 {
                     this.GraphicsObject.Clear(Color.Transparent);
                     Refresh();
+                    return;
                 }
                 
 
